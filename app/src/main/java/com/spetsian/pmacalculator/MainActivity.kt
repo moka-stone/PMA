@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
     }
     private lateinit var binding: ActivityMainBinding
 
+    data class CalculatorHistory(val request: String, val result: String)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -57,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         fun addNegative () {
             if(binding.calcText.text.length > 0) {
                 var tempText = binding.calcText.text
-                val lastNumber = tempText.takeLastWhile { it.isDigit() }
+                val lastNumber = tempText.takeLastWhile { it.isDigit() || it =='.'}
                 if (lastNumber.length > 0) {
                     bracketFlag = true
                     if (lastNumber.length == tempText.length) {
@@ -95,7 +97,7 @@ class MainActivity : AppCompatActivity() {
                         append(tempText)
                         delete(tempText.length - 1, tempText.length)
                     }
-                    val tempLastNumber = tempText.takeLastWhile { it.isDigit() }
+                    val tempLastNumber = tempText.takeLastWhile { it.isDigit() || it=='.'}
                     tempText = buildString {
                         append(tempText)
                         delete((tempText.length - tempLastNumber.length - 2), tempText.length)
@@ -181,7 +183,7 @@ class MainActivity : AppCompatActivity() {
             while (i < length) {
                 val currentChar = text[i]
 
-                if (currentChar.isDigit() || currentChar == '.' ||
+                if (currentChar.isDigit() || currentChar == '.' || currentChar == 'E'||
                     (currentChar == '-' && (i == 0 || text[i-1] in "+-*/" || text[i-1] == '('))) {
 
                     val numberStr = StringBuilder()
@@ -190,7 +192,7 @@ class MainActivity : AppCompatActivity() {
                         numberStr.append('-')
                         i++
                     }
-                    while (i < length && (text[i].isDigit() || text[i] == '.')) {
+                    while (i < length && (text[i].isDigit() || text[i] == '.' || text[i] == 'E')) {
                         numberStr.append(text[i])
                         i++
                     }
@@ -279,6 +281,7 @@ class MainActivity : AppCompatActivity() {
                 var res: Int = 0
                 if(result > result.toInt()) {
                     binding.calcText.text = result.toString()
+                    decimalFlag = true
 
                 }
                 else {
@@ -286,7 +289,6 @@ class MainActivity : AppCompatActivity() {
                     binding.calcText.text = res.toString()
                 }
 
-                decimalFlag = true
             } else {
                 binding.calcText.text = "Ошибка"
             }

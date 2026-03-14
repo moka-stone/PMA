@@ -1,2 +1,0 @@
-# PMA
-Programming mobile apps
