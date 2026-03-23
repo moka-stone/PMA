@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="history_title">История</string>
+    <string name="history_empty">История пуста</string>
+    <string name="history_load_error">Не удалось загрузить историю</string>
+
+    <string name="cancel">Отмена</string>
+    <string name="biometric_not_recognized">Отпечаток не распознан</string>
+
+    <string name="passkey_setup_title">Создайте PIN-код</string>
+    <string name="passkey_setup_title_reset">Новый PIN-код</string>
+    <string name="passkey_setup_subtitle">4–6 цифр. Он защитит калькулятор при запуске.</string>
+    <string name="passkey_pin_hint">PIN-код</string>
+    <string name="passkey_pin_confirm_hint">Повторите PIN</string>
+    <string name="passkey_biometric_switch">Разрешить вход по отпечатку / лицу</string>
+    <string name="passkey_save">Сохранить</string>
+    <string name="passkey_pins_mismatch">PIN не совпадает</string>
+    <string name="passkey_invalid_pin">Введите от 4 до 6 цифр</string>
+
+    <string name="passkey_unlock_title">Введите PIN</string>
+    <string name="passkey_unlock">Разблокировать</string>
+    <string name="passkey_biometric_unlock">Войти биометрией</string>
+    <string name="passkey_forgot">Забыли PIN?</string>
+    <string name="passkey_wrong_pin">Неверный PIN</string>
+    <string name="passkey_biometric_title">Подтверждение</string>
+    <string name="passkey_biometric_subtitle_unlock">Разблокируйте приложение</string>
+    <string name="passkey_biometric_subtitle_reset">Подтвердите личность для сброса PIN</string>
+    <string name="passkey_biometric_subtitle_change">Подтвердите личность</string>
+
+    <string name="passkey_change_title">Сменить PIN</string>
+    <string name="passkey_old_pin">Текущий PIN</string>
+    <string name="passkey_new_pin">Новый PIN</string>
+    <string name="passkey_confirm_new">Повторите новый PIN</string>
+    <string name="passkey_change_save">Сменить</string>
+    <string name="passkey_use_biometric_instead">Вместо PIN — биометрия</string>
+
+    <string name="passkey_menu_change">Сменить PIN</string>
+    <string name="passkey_menu_lock">Заблокировать</string>
+    <string name="passkey_pin_changed">PIN изменён</string>
+    <string name="passkey_bio_unavailable_toast">Биометрия недоступна — вход только по PIN</string>
+    <string name="passkey_reset_need_biometric">Сброс PIN возможен только при настроенной биометрии на устройстве</string>
+    <string name="passkey_can_enter_new_pin">Можно задать новый PIN</string>
+
+    <string name="notifications_permission_denied">Уведомления отключены</string>
+
+    <string name="push_default_title">PMACalculator</string>
+    <string name="push_default_body">Уведомление</string>
 </resources>

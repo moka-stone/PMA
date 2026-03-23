@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.PMACalculator" parent="Base.Theme.PMACalculator" />
+
+    <style name="Theme.PMACalculator.PassKeyGate" parent="Theme.PMACalculator">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>

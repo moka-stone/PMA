@@ -16,6 +16,12 @@ class CalculatorLogic {
         decimalFlag = decimal
         bracketFlag = bracket
     }
+    fun setExpression(newExpression: String) {
+        expression.clear()
+        expression.append(newExpression)
+        decimalFlag = false
+        bracketFlag = false
+    }
 
     fun getState(): Triple<String, Boolean, Boolean> =
         Triple(expression.toString(), decimalFlag, bracketFlag)

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "964178649200",
+    "project_id": "calculatorstorage",
+    "storage_bucket": "calculatorstorage.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964178649200:android:45ec10ae34e981ba3f54b5",
+        "android_client_info": {
+          "package_name": "com.spetsian.pmacalculator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVKRCyVsMb_mIwpBIfWue3AMTlMjCHrPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
